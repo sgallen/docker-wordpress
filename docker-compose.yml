@@ -33,6 +33,10 @@ services:
         - WORDPRESS_DB_NAME=wordpress
       volumes:
         - wordpress:/var/www/html
+        # - ./plugins:/var/www/html/wp-content/plugins
+        - ./custom-plugin:/var/www/html/wp-content/plugins/custom-plugin
+        # - ./themes:/var/www/html/wp-content/themes
+        - ./custom-theme:/var/www/html/wp-content/themes/custom-theme
       networks:
         - app-network
 
